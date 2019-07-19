@@ -1,5 +1,5 @@
 import {Component, OnInit, ViewChild, ElementRef} from '@angular/core';
-import Chart from 'chart.js';
+import { Chart } from 'chart.js';
 
 export interface PeriodicElement {
   invoice: string;
@@ -26,19 +26,23 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-
+  
   displayedColumns: string[] = ['invoice', 'customer', 'purchasedon', 'amount', 'status', 'trackingid'];
   dataSource = ELEMENT_DATA;
 
-  LineChart = [];
+  // LineChart:any = [];
+  chart:any = [];
+ 
+  labels: any = [];
 
+  data: any = [];
   constructor() {
 
   }
 
   ngOnInit() {
 
-    this.LineChart = new Chart( lineChart, {
+    this.chart = new Chart( 'lineChart', {
       // The type of chart we want to create
       type: 'line',
 

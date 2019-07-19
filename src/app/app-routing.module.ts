@@ -15,7 +15,8 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent},
   { path: 'managemagazine', component: ManagemagazineComponent},
   { path: 'addmagazine', component: AddmagazineComponent},
-  { path: 'resetpassword', component: ResetpasswordComponent}
+  { path: 'resetpassword', component: ResetpasswordComponent},
+   {path:'', component:LoginComponent},
 ];
 
 @NgModule({
